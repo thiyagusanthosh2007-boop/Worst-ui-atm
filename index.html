@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #container {
+            width: 300px;
+            margin: 50px auto;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Java based ATM</h2>
+        <form id="atmForm">
+            <input type="text" id="pin" placeholder="Enter PIN"><br>
+            <input type="password" id="amount" placeholder="Enter Amount (if applicable)"><br>
+            <input type="button" value="Check Balance" onclick="checkBalance()">
+            <input type="button" value="Withdraw" onclick="withdraw()">
+            <input type="button" value="Deposit" onclick="deposit()">
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function checkBalance() {
+            // Implement logic to check balance
+            document.getElementById("message").innerText = "Balance: $1000"; // Sample response
+        }
+
+        function withdraw() {
+            var amount = document.getElementById("amount").value;
+            // Implement logic to withdraw amount
+            document.getElementById("message").innerText = "Withdrawn: $" + amount; // Sample response
+        }
+
+        function deposit() {
+            var amount = document.getElementById("amount").value;
+            // Implement logic to deposit amount
+            document.getElementById("message").innerText = "Deposited: $" + amount; // Sample response
+        }
+    </script>
+</body>
+</html>
